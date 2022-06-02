@@ -1,0 +1,44 @@
+.task-planner {
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    max-width: 30rem;
+    margin: 4rem auto;
+}
+
+.task-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem;
+}
+
+.task-list {
+    padding: .5rem;
+}
+
+.task-text {
+    cursor: pointer;
+}
+
+.single-task {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    margin: .5rem;
+    border: 1px solid black;
+}
+
+.task-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+.completed {
+    color: rgb(71, 67, 67);
+    text-decoration: line-through;
+}
+
