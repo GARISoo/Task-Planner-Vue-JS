@@ -26,9 +26,27 @@
       <button class="delete-btn" @click="removeTask(task.id)">X</button>
     </div>
     <div class="task-filters" v-if="tasks.length !== 0">
-      <button class="btn" @click="setFilter('All')">All</button>
-      <button class="btn" @click="setFilter('In progress')">In progress</button>
-      <button class="btn" @click="setFilter('Completed')">Completed</button>
+      <button
+        class="btn"
+        :class="{ active: filter === 'All' }"
+        @click="setFilter('All')"
+      >
+        All
+      </button>
+      <button
+        class="btn"
+        :class="{ active: filter === 'In progress' }"
+        @click="setFilter('In progress')"
+      >
+        In progress
+      </button>
+      <button
+        class="btn"
+        :class="{ active: filter === 'Completed' }"
+        @click="setFilter('Completed')"
+      >
+        Completed
+      </button>
     </div>
   </div>
 </template>
