@@ -6,27 +6,29 @@
   <div class="task-planner">
     <div class="task-add">
       <input
-        class="input"
+        class="task-input"
         type="text"
         placeholder="Your task"
         v-model="inputValue"
       />
-      <button @click="addTask()">Add</button>
+      <button class="btn" @click="addTask()">Add</button>
     </div>
-    <div class="single-task" v-for="task in visibleTasks" :key="task">
-      <span
-        class="task-text"
-        :class="{ completed: task.isDone }"
-        @click="toggleComplete(task.id)"
-      >
+    <div
+      class="single-task"
+      :class="{ doneBox: task.isDone }"
+      v-for="task in visibleTasks"
+      @click="toggleComplete(task.id)"
+      :key="task"
+    >
+      <span class="task-text" :class="{ doneText: task.isDone }">
         {{ task.title }}
       </span>
       <button class="delete-btn" @click="removeTask(task.id)">X</button>
     </div>
-    <div class="task-filters">
-      <button @click="setFilter('All')">All</button>
-      <button @click="setFilter('In progress')">In progress</button>
-      <button @click="setFilter('Completed')">Completed</button>
+    <div class="task-filters" v-if="tasks.length !== 0">
+      <button class="btn" @click="setFilter('All')">All</button>
+      <button class="btn" @click="setFilter('In progress')">In progress</button>
+      <button class="btn" @click="setFilter('Completed')">Completed</button>
     </div>
   </div>
 </template>

@@ -2,8 +2,9 @@
     padding: 1rem;
     border: 1px solid black;
     border-radius: 1rem;
-    max-width: 30rem;
+    max-width: 20rem;
     margin: 4rem auto;
+    background-color: rgba(255, 248, 248, 0.925);
 }
 
 .task-add {
@@ -18,16 +19,12 @@
     padding: .5rem;
 }
 
-.task-text {
-    cursor: pointer;
-}
-
 .single-task {
     display: flex;
     justify-content: space-between;
-    padding: .5rem;
-    margin: .5rem;
-    border: 1px solid black;
+    padding: .5rem .5rem .2rem;
+    border-bottom: 1px solid black;
+    cursor: pointer;
 }
 
 .task-filters {
@@ -37,8 +34,29 @@
     padding: .5rem;
 }
 
-.completed {
-    color: rgb(71, 67, 67);
+.doneText {
     text-decoration: line-through;
+    color: hsl(0, 0%, 70%);
+    font-weight: 600;
 }
 
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 700;
+    cursor: pointer;
+}
+
+.task-input {
+    padding: .4rem 2rem .4rem .5rem;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: transparent;
+    padding: .4rem;
+    margin: .2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
